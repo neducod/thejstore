@@ -118,10 +118,17 @@ body{
     margin: 15px 0;
     transition: 0.2 ease;
     position: relative;
+    background-color: white;
 }
 .product-card img{
     width: 100%;
     border-radius: 20px;
+}
+.oddimg{
+    margin-bottom: 50px;
+}
+#oddimg{
+    width: 66%;
 }
 .des{
     display: flex;
@@ -129,10 +136,10 @@ body{
     text-align: start;
     padding: 10px 0;
 }
-.des h5{
+.product-card h5{
     padding-top: 7px;
     color: #1a1a1a;
-    font-size: 19px;
+    font-size: 23px;
 }
 .des .price{
     padding-top: 7px;
@@ -200,63 +207,159 @@ body{
     color: #555;
     font-size: 0.95rem;
   }
-footer{
-    padding: 4rem 8rem;
+ 
+  .section-p1{
+    padding: 40px 80px;
 }
-/*
-  /* Product grid 
-  .shop-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-  }
-  
-  .product-card {
-    background-color: #f7fafc;
-    padding: 1rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-  }
-  
-  .product-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .product-card img {
+  footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+footer .logoo{
+    width: 10%;
+    margin-bottom: 30px;
+}
+footer h4{
+    font-size: 14px;
+     padding-bottom: 10px; 
+}
+footer p{
+    font-size: 13px;
+    margin: 0 0 4px 0;
+}
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    margin: 16px;
+    color: #222;
+}
+footer .follow{
+    margin-top: 20px;
+}
+footer .install .row img{
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+footer .install img{
+    margin: 10px 0 15px 0;
+}
+footer .copyright{
     width: 100%;
-    height: auto;
-    border-radius: 6px;
-    margin-bottom: 1rem;
-  }
-  
-  .product-card h3 {
-    color: #333;
-    margin: 0.5rem 0;
-  }
-  
-  .price {
-    color: #2f855a;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  
-  .product-card button {
-    background-color: #2f855a;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  .product-card button:hover {
-    background-color: #276749;
-  }
-  */
+    text-align: center;
+}
+#mobile{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
     .nav-links{
         display: none;
