@@ -132,3 +132,15 @@ body{
 .oddimg{
     margin-bottom: 110px; 
 }
+
+.product h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 23px;
+}
+.des{
+    gap: 80px;
+    text-align: start;
+    padding: 10px 0;
+    display: flex;
+}
