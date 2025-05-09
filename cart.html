@@ -8,7 +8,7 @@
 <meta name="keywords" content="Nigerian grocery, online market, food delivery, rice, tomatoes, Lagos store">
 <meta name="author" content="Josephine Jerome">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./styless.css">
+<link rel="stylesheet" href="./second.css">
 </head>
 <body>
     <nav class="navbar">
@@ -30,18 +30,14 @@
         <div class="hamburger" id="hamburger">☰</div>
    </nav> 
 
-   <div class="container">
-        <div class="product category-electronics">
-            <img src="./img/img13.jpeg" alt="">
-            <h3>Headphones</h3>
-            <div class="des">
-                <p>$50</p>
-                <a href="#"><button>Add to cart </button></a>
-            </div>
-        </div>
-   </div>
 
-   <div class="cartTab">
+
+
+    <h1>Your Cart</h1>
+    <ul id="cartItems"></ul>
+ 
+
+   <!-- <div class="cartTab"> 
         <h1>Shopping Cart</h1>
         <div class="listCart">
             <div class="item">
@@ -65,6 +61,16 @@
             <button class="close">CLOSE</button>
             <button class="checkOut">CHECK</button>
         </div>
-   </div>
+   </div>-->
 </body>
+<script>
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartList = document.getElementById('cartItems');
+  
+    cart.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      cartList.appendChild(li);
+    });
+  </script>
 </html>
