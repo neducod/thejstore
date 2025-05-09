@@ -35,7 +35,22 @@ body{
     font-size: 1.9rem;
     cursor: pointer;
 }
-
+.nav-links li{
+    position: relative;
+}
+.nav-links li span{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+}
 @media (max-width: 768px) {
     .nav-links{
         display: none;
@@ -106,6 +121,7 @@ body{
     padding: 19px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.2s;
+    cursor: pointer;
   }
 
   .product:hover {
@@ -143,4 +159,55 @@ body{
     text-align: start;
     padding: 10px 0;
     display: flex;
+}
+
+
+
+
+
+
+
+
+
+.cartTab{
+    width: 400px;
+    background-color: #1a1a1a;
+    color: #eee;
+    position: fixed;
+    /* inset: top right bottom left; */
+    inset: 0 0 0 auto;
+    grid-template-rows: 70px 1fr 70px;
+}
+.cartTab h1{
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+.cartTab .btnn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cartTab .btnn button{
+    border: none;
+    background-color: rgb(245, 207, 52);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+.cartTab .btnn .close{
+    background-color: #eee;
+}
+.cartTab .listCart .item img{
+    width: 100%;
+}
+.cartTab .listCart .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+.listCart .quantity span{
+    display: inline-block;
+    width: 25px;
 }
