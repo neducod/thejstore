@@ -56,11 +56,26 @@ hamburger.addEventListener('click', ()=> {
 
 
 
+//ADD TO CART FEATURE
 
-
-  function addToCart(productName) {
+ /* function addToCart(productName) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart.push(productName);
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(productName + " added to cart!");
+  }
+*/
+  function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Check if item already exists
+    let existingItem = cart.find(item => item.name === name);
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      cart.push({ name, price, image, quantity: 1 });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(name + " added to cart!");
   }

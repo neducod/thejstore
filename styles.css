@@ -30,6 +30,22 @@ body{
 .nav-links li a img{
     width: 25px;
 }
+.nav-links li{
+    position: relative;
+}
+.nav-links li span{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+}
 .hamburger{
     display: none;
     font-size: 1.9rem;
