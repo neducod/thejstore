@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="./styless.css">
 </head>
-<body>
+<body class="#">
     <nav class="navbar">
         <div class="logo">
             <a href="./index.html">
@@ -23,7 +23,7 @@
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">About</a></li>
             <li>
-                <a href="./cart.html"><img src="./img/cart.png" alt="shopping_cart"></a>
+                <a href="#"><img src="./img/cart.png" alt="shopping_cart"></a>
                 <span>0</span>
             </li>
         </div>
@@ -41,11 +41,13 @@
     <!-- Product Grid -->
         <div class="product-grid" id="product-grid">
             <div class="product category-clothes">
-                <img src="./img/img1.png" alt="">
-                <h3>Snickers</h3>
-                <div class="des">
-                    <p>₦700</p>
-                    <a href="#"><button class="addCart">Add to cart </button></a>
+                <div class="item">
+                    <img src="./img/img1.png" alt="">
+                    <h3>Snickers</h3>
+                    <div class="des">
+                        <p>₦700</p>
+                        <a href="#"><button class="addCart">Add to cart </button></a>
+                    </div>
                 </div>
             </div>
             <div class="product category-clothes">
@@ -53,7 +55,7 @@
                 <h3>Twix</h3>
                 <div class="des">
                     <p>₦500</p>
-                    <a href="#"><button onclick="addToCart('₦500', 'Twix',  './img/img2.png')">Add to cart</button></a>
+                    <a href="#"><button>Add to cart</button></a>
                 </div>
             </div>
             <div class="product category-clothes">
@@ -260,6 +262,35 @@
   </div>
 
 
+
+
+
+    <!-- TRIAL CODE -->
+
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart" id="cartItems">
+            <div class="item">
+                <div class="image">
+                    <img src="./img/img1.png" alt="">
+                </div>
+                <div class="name">
+                    NAME
+                </div>
+                <div class="totalPrice">
+                    ₦700
+                </div>
+                <div class="quantity">
+                    <span class="minus"><</span>
+                    <span>0</span>
+                    <span class="plus">></span>
+                </div>
+            </div>
+        </div>
+        <div class="btnn">
+          <button class="close">CLOSE</button>
+          <button class="checkOut">CHECK</button>
+        </div>
 </body>
 <script src="./script.js"></script>
 </html>

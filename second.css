@@ -79,7 +79,7 @@ body{
     color: #eee;
     position: fixed;
     /* inset: top right bottom left; */
-    inset: 0 0 0 auto;
+    inset: 0 -400px 0 auto;
     grid-template-rows: 70px 1fr 70px;
 }
 .cartTab h1{
@@ -123,4 +123,13 @@ body{
 .listCart .quantity span:nth-child(2){
     background-color: transparent;
     color: #eee;
+}
+.listCart .item:nth-child(even){
+    background-color: #eee1;
+}
+.listCart{
+    overflow: auto;
+}
+.listCart::-webkit-scrollbar{
+    width: 0;
 }

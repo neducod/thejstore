@@ -85,6 +85,8 @@ body{
     max-width: 1100px;
     margin: auto;
     padding: 2rem 2rem;
+
+    transition: transform .5s;
   }
 
   .filter-buttons {
@@ -167,3 +169,76 @@ body{
 
 
 
+/* TRAIL CODE */
+
+
+.cartTab{
+    width: 400px;
+    background-color: #1a1a1a;
+    color: #eee;
+    position: fixed;
+    /* inset: top right bottom left; */
+    inset: 0 -400px 0 auto;
+    grid-template-rows: 70px 1fr 70px;
+
+
+    transition: .5s;
+}
+body.showCart .cartTab{
+    inset: 0 0 0 auto;
+}
+body.showCart .container{
+    /*  */
+    transform: translateX(-250px);
+}
+.cartTab h1{
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+.cartTab .btnn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cartTab .btnn button{
+    border: none;
+    background-color: rgb(245, 207, 52);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+.cartTab .btnn .close{
+    background-color: #eee;
+}
+.cartTab .listCart .item img{
+    width: 100%;
+}
+.cartTab .listCart .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+.listCart .quantity span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+}
+.listCart .item:nth-child(even){
+    background-color: #eee1;
+}
+.listCart{
+    overflow: auto;
+}
+.listCart::-webkit-scrollbar{
+    width: 0;
+}
