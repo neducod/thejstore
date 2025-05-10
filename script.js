@@ -5,32 +5,8 @@ hamburger.addEventListener('click', ()=> {
     navLinks.classList.toggle('show');
 });
 
-/*
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const productCards = document.querySelectorAll('.product-card');
 
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const filter = button.getAttribute('data-filter');
-
-      // Update active button style
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-
-      // Show/hide cards
-      productCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-
-*/
-
+//CODE FOR FLITRATION
   const buttons = document.querySelectorAll('.filter-btn');
   const products = document.querySelectorAll('.product');
 
@@ -57,25 +33,3 @@ hamburger.addEventListener('click', ()=> {
 
 
 //ADD TO CART FEATURE
-
- /* function addToCart(productName) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.push(productName);
-    localStorage.setItem('cart', JSON.stringify(cart));
-    alert(productName + " added to cart!");
-  }
-*/
-  function addToCart(name, price, image) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    // Check if item already exists
-    let existingItem = cart.find(item => item.name === name);
-    if (existingItem) {
-      existingItem.quantity += 1;
-    } else {
-      cart.push({ name, price, image, quantity: 1 });
-    }
-
-    localStorage.setItem('cart', JSON.stringify(cart));
-    alert(name + " added to cart!");
-  }
