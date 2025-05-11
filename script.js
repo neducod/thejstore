@@ -119,6 +119,55 @@ document.getElementById('close-cart').addEventListener('click', function() {
 updateCartCount();*/
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+function renderCart() {
+    const cart = getCart();
+    const cartItemsDiv = document.getElementById('cart-items');
+    const cartTotalDiv = document.getElementById('cart-total');
+    cartItemsDiv.innerHTML = '';
+    let total = 0;
+    if (cart.length === 0) {
+        cartItemsDiv.textContent = 'Cart is empty.';
+        cartTotalDiv.textContent = '';
+    } else {
+        cart.forEach((item, idx) => {
+            const itemTotal = item.price * item.qty;
+            total += itemTotal;
+            const div = document.createElement('div');
+            div.innerHTML = `
+                <img src="${item.img}" width="30"> 
+                ${item.name} - ₦${item.price} x <span class="qty">${item.qty}</span> = <strong>₦${itemTotal}</strong>
+                <button class="qty-btn" data-idx="${idx}" data-action="decrease">-</button>
+                <button class="qty-btn" data-idx="${idx}" data-action="increase">+</button>
+                <button class="remove-btn" data-idx="${idx}">Remove</button>
+            `;
+            cartItemsDiv.appendChild(div);
+        });
+        cartTotalDiv.innerHTML = `<strong>Total: ₦${total}</strong>`;
+    }
+}
+
+//
+
+
+
+
+
+
+
 function getCart() {
     return JSON.parse(localStorage.getItem('cart')) || [];
 }
@@ -217,3 +266,35 @@ document.getElementById('cart-items').addEventListener('click', function(e) {
 
 // Initialize cart count on page load
 updateCartCount();
+
+
+//Checkout button logic
+document.getElementById('checkout-btn').addEventListener('click', function() {
+    const cart = getCart();
+    if (cart.length === 0) {
+        alert('Your cart is empty!');
+        return;
+    }
+    const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+    alert(`Thank you for your purchase! Your total is ₦${total}.`);
+    // Optionally, clear the cart after checkout:
+    localStorage.removeItem('cart');
+    updateCartCount();
+    renderCart();
+});
+
+
+
+
+
+
+
+// JAVASCRIPT TO HIDE AND SHOW ALERT
+function showCustomAlert(message) {
+    document.getElementById('custom-alert-message').textContent = message;
+    document.getElementById('custom-alert').style.display = 'flex';
+}
+
+document.getElementById('custom-alert-close').addEventListener('click', function() {
+    document.getElementById('custom-alert').style.display = 'none';
+});
