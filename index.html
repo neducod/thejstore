@@ -26,9 +26,17 @@
             <li><a href="./shop.html">Shop</a></li>
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">About</a></li>
-            <li>
+            <!-- <li> -
                 <a href="#"><img src="./img/cart.png" alt="shopping_cart"></a>
                 <span>0</span>
+            </li>-->
+            <li>
+                <div id="cart-count"> Cart: 0</div>
+                <button id="show-cart">Show Cart</button>
+                <div id="cart-modal" style="display:none;">
+                    <div id="cart-items"></div>
+                    <button id="close-cart">Close</button>
+                </div>
             </li>
         </div>
         <div class="hamburger" id="hamburger">☰</div>
@@ -51,68 +59,83 @@
         <h1>Featured Products</h1>
         <div class="products-grid">
             <div class="product-card">
-                <img src="./img/img10.png" alt="">
-                <h5>Milk</h5>
-                <div class="des">
-                    <p class="price">₦5,000</p>
-                    <a href="#"><button>Add to cart</button></a>
+                <div class="item" data-name="Nutella" data-price="5000" data-img="./img/img10.png">
+                    <img src="./img/img10.png" alt="">
+                    <h5>Nutella</h5>
+                    <div class="des">
+                        <p class="price">₦5,000</p>
+                        <button class="addCart">Add to cart</button>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
-                <img src="./img/img11.png" alt="">
-                <h5>Milk</h5>
-                <div class="des">
-                    <p class="price">₦5,000</p>
-                    <a href="#"><button>Add to cart</button></a>
-                </div>
-               
-            </div>
-            <div class="product-card">
-                <img src="./img/img12.jpeg" alt="milo">
-                <h5>Milk</h5>
-                <div class="des">
-                    <p class="price">₦5,000</p>
-                    <a href="#"><button>Add to cart</button></a>
+                <div class="item" data-name="Pad" data-price="5000" data-img="./img/img11.png">
+                    <img src="./img/img11.png" alt="">
+                    <h5>Napkins</h5>
+                    <div class="des">
+                        <p class="price">₦5,000</p>
+                        <button class="addCart">Add to cart</button>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
-                <img src="./img/img13.jpeg" alt="macaroni" class="oddimg">
-                <h5>Milk</h5>
-                <div class="des">
-                    <p class="price">₦5,000</p>
-                    <a href="#"><button>Add to cart</button></a>
+                <div class="item" data-name="Milo" data-price="5000" data-img="./img/img12.jpeg">
+                    <img src="./img/img12.jpeg" alt="milo">
+                    <h5>Milo</h5>
+                    <div class="des">
+                        <p class="price">₦5,000</p>
+                        <button class="addCart">Add to cart</button>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
-                <img src="./img/img14.jpeg" alt="">
-                <h5>Milk</h5>
-                <div class="des">
-                    <p class="price">₦5,000</p>
-                    <a href="#"><button>Add to cart</button></a>
+                <div class="item" data-name="Macaroni" data-price="5000" data-img="./img/img13.jpeg">
+                    <img src="./img/img13.jpeg" alt="macaroni" class="oddimg">
+                    <h5>Macaroni</h5>
+                    <div class="des">
+                        <p class="price">₦5,000</p>
+                        <button class="addCart">Add to cart</button>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
-                <img src="./img/img15.png" alt="coconut_oil" id="oddimg">
-                <h5>Coconut Oil</h5>
-                <div class="des">
-                    <p class="price">₦5,000</p>
-                    <a href="#"><button>Add to cart</button></a>
+                <div class="item" data-name="Maltina" data-price="5000" data-img="./img/img14.jpeg">
+                    <img src="./img/img14.jpeg" alt="">
+                    <h5>Maltina</h5>
+                    <div class="des">
+                        <p class="price">₦5,000</p>
+                        <button class="addCart">Add to cart</button>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
-                <img src="./img/milk.png" alt="">
-                <h5>Milk</h5>
-                <div class="des">
-                    <p class="price">₦5,000</p>
-                    <a href="#"><button>Add to cart</button></a>
+                <div class="item" data-name="coconut_oil" data-price="5000" data-img="./img/img15.png">
+                    <img src="./img/img15.png" alt="coconut_oil" id="oddimg">
+                    <h5>Coconut Oil</h5>
+                    <div class="des">
+                        <p class="price">₦5,000</p>
+                        <button class="addCart">Add to Cart</button>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
-                <img src="./img/img6.png" alt="">
-                <h5>Milk</h5>
-                <div class="des">
-                    <p class="price">₦5,000</p>
-                    <a href="#"><button>Add to cart</button></a>
+                <div class="item" data-name="Milk" data-price="5000" data-img="./img/milk.png">
+                    <img src="./img/milk.png" alt="">
+                    <h5>Milk</h5>
+                    <div class="des">
+                        <p class="price">₦5,000</p>
+                        <button class="addCart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="item" data-name="Rice" data-price="50000" data-img="./img/img6.png">
+                    <img src="./img/img6.png" alt="">
+                    <h5>Rice</h5>
+                    <div class="des">
+                        <p class="price">₦50,000</p>
+                        <button class="addCart">Add to cart</button>
+                    </div>
                 </div>
             </div>
             
@@ -151,69 +174,84 @@
         <h1>Snacks In Stock</h1>
         <div class="products-grid">
             <div class="product-card">
-                <img src="./img/milk.png" alt="">
-                <h5>Milk</h5>
-                <div class="des">
-                    <p class="price">₦5,000</p>
-                    <a href="#"><button>Add to cart</button></a>
+                <div class="item" data-name="Milk" data-price="5000" data-img="./img/milk.png">
+                    <img src="./img/milk.png" alt="">
+                    <h5>Milk</h5>
+                    <div class="des">
+                        <p class="price">₦5,000</p>
+                        <button class="addCart">Add to cart</button>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
-                <img src="./img/img1.png" alt="">
-                <h5>Snickers</h5>
-                <div class="des">
-                    <p class="price">₦2,500</p>
-                    <a href="#"><button>Add to cart</button></a>
-                </div>
-                
-            </div>
-            <div class="product-card">
-                <img src="./img/img2.png" alt="">
-                <h5>Twix</h5>
-                <div class="des">
-                    <p class="price">₦2,700</p>
-                    <a href="#"><button>Add to cart</button></a>
+                <div class="item" data-name="Snickers" data-price="2500" data-img="./img/img1.pmg">
+                    <img src="./img/img1.png" alt="">
+                    <h5>Snickers</h5>
+                    <div class="des">
+                        <p class="price">₦2,500</p>
+                        <button class="addCart">Add to cart</button>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
-                <img src="./img/img3.png" alt="">
-                <h5>Oreo</h5>
-                <div class="des">
-                    <p class="price">₦2,000</p>
-                    <a href="#"><button>Add to cart</button></a>
+                <div class="item" data-name="Twix" data-price="2700" data-img="./img/img2.png">
+                    <img src="./img/img2.png" alt="">
+                    <h5>Twix</h5>
+                    <div class="des">
+                        <p class="price">₦2,700</p>
+                        <button class="addCart">Add to cart</button>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
+                <div class="item" data-name="Oreo" data-price="2000" data-img="./img/img3.pmg">
+                    <img src="./img/img3.png" alt="oreo">
+                    <h5>Oreo</h5>
+                    <div class="des">
+                        <p class="price">₦2,000</p>
+                        <button class="addCart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="item" data-name="Snickers Bite" data-price="15000" data-img="./img/img4.png">
                 <!-- <img src="./img/img4.png" alt=""> -->
                 <img src="./img/img4.png" alt="">
                 <h5>Snickers Bite</h5>
                 <div class="des">
                     <p class="price">₦15,000</p>
-                    <a href="#"><button>Add to cart</button></a>
+                    <button class="addCart">Add to cart</button>
+                </div>
                 </div>
             </div>
             <div class="product-card">
-                <img src="./img/img5.png" alt="mandmcandy" class="oddimg">
-                <h5>M&M's</h5>
-                <div class="des">
-                    <p class="price">₦7,800</p>
-                    <a href="#"><button>Add to cart</button></a>
+                <div class="item" data-name="M&M's" data-price="7800" data-img="./img/img5.png">
+                    <img src="./img/img5.png" alt="mandmcandy" class="oddimg">
+                    <h5>M&M's</h5>
+                    <div class="des">
+                        <p class="price">₦7,800</p>
+                        <button class="addCart">Add to cart</button>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
-                <img src="./img/img7.png" alt="pringles" class="oddimg">
-                <h5>Pringles</h5>
-                <div class="des">
-                    <p class="price">₦800</p>
-                    <a href="#"><button>Add to cart</button></a>
+                <div class="item" data-name="Pringles" data-price="800" data-img="./img/img7.png">
+                    <img src="./img/img7.png" alt="pringles" class="oddimg">
+                    <h5>Pringles</h5>
+                    <div class="des">
+                        <p class="price">₦800</p>
+                        <button class="addCart">Add to cart</button>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
-                <img src="./img/img9.png" alt="nutella" class="oddimg">
-                <h5>Nutella</h5>
-                <div class="des">
-                    <p class="price">₦25,000</p>
-                    <a href="#"><button>Add to cart</button></a>
+                <div class="item" data-name="Nutella" data-price="25000" data-img="./img/img9.png">
+                    <img src="./img/img9.png" alt="nutella" class="oddimg">
+                    <h5>Nutella</h5>
+                    <div class="des">
+                        <p class="price">₦25,000</p>
+                        <button class="addCart">Add to cart</button>
+                    </div>
                 </div>
             </div>
             
