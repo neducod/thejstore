@@ -50,7 +50,7 @@ iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
 });
 */
-
+/*
 
 let iconCart = document.querySelector('.icon-cart');
 let closeCart = document.querySelector('.close');
@@ -58,4 +58,27 @@ let body = document.querySelector('body');
 
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
+});
+*/
+
+
+// Simple cart array to hold items
+let cart = [];
+
+// Get the button and cart count display
+const addCartBtn = document.querySelector('.addCart');
+const cartCount = document.getElementById('cart-count');
+
+// Listen for button click
+addCartBtn.addEventListener('click', function() {
+    // Example item object
+    const item = {
+        name: 'Snickers',
+        price: 700,
+        img: './img/img1.png'
+    };
+    cart.push(item);
+
+    // Update cart count
+    cartCount.textContent = 'Cart: ' + cart.length;
 });
