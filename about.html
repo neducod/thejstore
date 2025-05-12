@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The J Store</title>
+    <meta name="description" content="Buy fresh Nigerian groceries like rice, tomatoes, yams, oil and more. Fast delivery within Nigeria.">
+<meta name="keywords" content="Nigerian grocery, online market, food delivery, rice, tomatoes, Lagos store">
+<meta name="author" content="Josephine Jerome">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./styles.css">
+
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-TBD" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: bisque;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid black;
+}
+.logo a img{
+    width: 100px;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+.nav-links li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #111;
+}
+.nav-links li a img{
+    width: 25px;
+}
+.nav-links li{
+    position: relative;
+}
+.hamburger{
+    display: none;
+    font-size: 1.9rem;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./img/logo.png" alt="logo_image">
+            </a>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="./shop.html">Shop</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About</a></li>
+            <li>
+                <div id="cart-count"> Cart: 0</div>
+                <button id="show-cart">Show Cart</button>
+                <div id="cart-modal" style="display:none;">
+                    <div id="cart-items"></div>
+                    <div id="cart-total"></div>
+                    <button id="checkout-btn">Checkout</button>
+                    <button id="close-cart">Close</button>
+                </div>
+            </li>
+        </div>
+        <div class="hamburger" id="hamburger">☰</div>
+   </nav> 
+</body>
+</html>
