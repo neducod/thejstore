@@ -6,6 +6,10 @@ hamburger.addEventListener('click', ()=> {
     navLinks.classList.toggle('show');
 });
 
+//BACK TO TOP BUTTON
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
 //CODE FOR FLITRATION
   const buttons = document.querySelectorAll('.filter-btn');
