@@ -8,7 +8,7 @@
 <meta name="keywords" content="Nigerian grocery, online market, food delivery, rice, tomatoes, Lagos store">
 <meta name="author" content="Josephine Jerome">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./styles.css">
+<!-- <link rel="stylesheet" href="./styles.css"> -->
 
 <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-TBD" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,6 +19,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+@media (max-width: 480px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .col {
+    align-items: center;
+  }
+
+  footer a {
+    margin: 6px 0;
+  }
 }
 @media (max-width: 768px){
     .container {
@@ -274,6 +289,7 @@ footer .copyright{
 #mobile{
     display: none;
 }
+
 </style>
 </head>
 <body>
@@ -284,9 +300,9 @@ footer .copyright{
             </a>
         </div>
         <div class="nav-links" id="nav-links">
-            <li><a href="#">Home</a></li>
+            <li><a href="./index.html">Home</a></li>
             <li><a href="./shop.html">Shop</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="./contactus.html">Contact Us</a></li>
             <li><a href="#">About</a></li>
             <!-- <li> 
                 <div id="cart-count"> Cart: 0</div>
