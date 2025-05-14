@@ -281,3 +281,12 @@ body{
     cursor: pointer;
     font-size: 1em;
 }
+/* POP UP NOTIFICATION */
+#cart-popup {
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  #cart-popup.show {
+    display: block;
+    opacity: 1;
+  }

@@ -302,3 +302,20 @@ function showCustomAlert(message) {
 document.getElementById('custom-alert-close').addEventListener('click', function() {
     document.getElementById('custom-alert').style.display = 'none';
 });
+
+
+//POP UP FOR NEW CART
+function showCartPopup(message = "Added to cart!") {
+    const popup = document.getElementById('cart-popup');
+    popup.textContent = message;
+    popup.classList.add('show');
+    popup.style.display = 'block';
+  
+    setTimeout(() => {
+      popup.classList.remove('show');
+      setTimeout(() => {
+        popup.style.display = 'none';
+      }, 400); // match the transition duration
+    }, 3000); // show for 2 seconds
+  }
+  showCartPopup("Your item was added to the cart!");
